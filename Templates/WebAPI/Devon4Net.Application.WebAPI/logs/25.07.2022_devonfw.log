@@ -1,0 +1,241 @@
+2022-07-25 11:54:35.630 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 11:54:35.697 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 11:54:35.858 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 11:54:35.860 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 11:54:40.197 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 11:54:40.297 +02:00 [INF] Creating key {c7445e9d-f638-4ca9-bc0c-83415f2ff17d} with creation date 2022-07-25 09:54:40Z, activation date 2022-07-25 09:54:40Z, and expiration date 2022-10-23 09:54:40Z.
+2022-07-25 11:54:40.321 +02:00 [INF] Writing data to file 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys\key-c7445e9d-f638-4ca9-bc0c-83415f2ff17d.xml'.
+2022-07-25 11:54:40.364 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 11:54:40.431 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 11:54:40.432 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 11:54:40.433 +02:00 [INF] Hosting environment: Development
+2022-07-25 11:54:40.436 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 11:57:25.006 +02:00 [INF] Application is shutting down...
+2022-07-25 12:24:26.131 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 12:24:26.198 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 12:24:26.404 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 12:24:26.407 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 12:24:30.774 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 12:24:30.856 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 12:24:30.900 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 12:24:30.904 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 12:24:30.906 +02:00 [INF] Hosting environment: Development
+2022-07-25 12:24:30.910 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 12:24:32.964 +02:00 [INF] Application is shutting down...
+2022-07-25 12:28:47.473 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 12:28:47.534 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 12:28:47.723 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 12:28:47.724 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 12:28:52.050 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 12:28:52.149 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 12:28:52.195 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 12:28:52.200 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 12:28:52.203 +02:00 [INF] Hosting environment: Development
+2022-07-25 12:28:52.207 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 12:29:06.561 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/index.html - -
+2022-07-25 12:29:06.735 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/index.html - - - 200 - text/html;charset=utf-8 177.4652ms
+2022-07-25 12:29:06.758 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/swagger-ui-standalone-preset.js - -
+2022-07-25 12:29:06.758 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/swagger-ui.css - -
+2022-07-25 12:29:06.758 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/swagger-ui-bundle.js - -
+2022-07-25 12:29:06.790 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-07-25 12:29:06.790 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-07-25 12:29:06.794 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 35.7087ms
+2022-07-25 12:29:06.795 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/swagger-ui.css - - - 200 143632 text/css 36.8002ms
+2022-07-25 12:29:06.802 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-07-25 12:29:06.804 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 46.5768ms
+2022-07-25 12:29:06.929 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/v1/swagger.json - -
+2022-07-25 12:29:06.964 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/favicon-32x32.png - -
+2022-07-25 12:29:06.976 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-07-25 12:29:06.978 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/favicon-32x32.png - - - 200 628 image/png 14.3092ms
+2022-07-25 12:29:07.160 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 230.9167ms
+2022-07-25 12:38:00.151 +02:00 [INF] Application is shutting down...
+2022-07-25 14:19:45.136 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 14:19:45.180 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:19:45.299 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:19:45.302 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 14:19:49.663 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 14:19:49.771 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 14:19:49.806 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 14:19:49.807 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 14:19:49.811 +02:00 [INF] Hosting environment: Development
+2022-07-25 14:19:49.812 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 14:19:59.083 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/index.html - -
+2022-07-25 14:19:59.203 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/index.html - - - 200 - text/html;charset=utf-8 123.4651ms
+2022-07-25 14:19:59.235 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/swagger-ui.css - -
+2022-07-25 14:19:59.235 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/swagger-ui-bundle.js - -
+2022-07-25 14:19:59.235 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/swagger-ui-standalone-preset.js - -
+2022-07-25 14:19:59.269 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-07-25 14:19:59.269 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-07-25 14:19:59.274 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 38.1336ms
+2022-07-25 14:19:59.278 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/swagger-ui.css - - - 200 143632 text/css 42.5194ms
+2022-07-25 14:19:59.289 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-07-25 14:19:59.292 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 56.9165ms
+2022-07-25 14:19:59.435 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/swagger/v1/swagger.json - -
+2022-07-25 14:19:59.547 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 112.3773ms
+2022-07-25 14:20:09.406 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/Dish - -
+2022-07-25 14:20:09.428 +02:00 [INF] Executing endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:20:09.449 +02:00 [INF] Route matched with {action = "GetDish", controller = "Dish"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetDish() on controller Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController (Devon4Net.Application.WebAPI.Implementation).
+2022-07-25 14:20:09.895 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'TodoContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.0' with options: StoreName=Todos 
+2022-07-25 14:20:09.922 +02:00 [INF] Executed action Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation) in 460.7217ms
+2022-07-25 14:20:09.936 +02:00 [INF] Executed endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:20:09.948 +02:00 [ERR] Exception Type: InvalidOperationException | Message: Cannot create a DbSet for 'Dish' because this type is not included in the model for the context. | InnerException: No InnerException exception data found
+2022-07-25 14:20:09.956 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/Dish - - - 500 0 - 549.3023ms
+2022-07-25 14:21:15.248 +02:00 [INF] Application is shutting down...
+2022-07-25 14:21:20.319 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 14:21:20.364 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:21:20.485 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:21:20.492 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 14:21:24.747 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 14:21:24.841 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 14:21:24.882 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 14:21:24.886 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 14:21:24.891 +02:00 [INF] Hosting environment: Development
+2022-07-25 14:21:24.892 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 14:21:29.031 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/Dish - -
+2022-07-25 14:21:29.093 +02:00 [INF] Executing endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:21:29.114 +02:00 [INF] Route matched with {action = "GetDish", controller = "Dish"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetDish() on controller Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController (Devon4Net.Application.WebAPI.Implementation).
+2022-07-25 14:21:29.460 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'TodoContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.0' with options: StoreName=Todos 
+2022-07-25 14:21:29.480 +02:00 [INF] Executed action Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation) in 351.3615ms
+2022-07-25 14:21:29.494 +02:00 [INF] Executed endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:21:29.502 +02:00 [ERR] Exception Type: InvalidOperationException | Message: Cannot create a DbSet for 'Dish' because this type is not included in the model for the context. | InnerException: No InnerException exception data found
+2022-07-25 14:21:29.514 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/Dish - - - 500 0 - 485.7040ms
+2022-07-25 14:23:02.789 +02:00 [INF] Application is shutting down...
+2022-07-25 14:24:11.760 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 14:24:11.820 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:24:11.960 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:24:11.965 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 14:24:16.295 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 14:24:16.441 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 14:24:16.480 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 14:24:16.481 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 14:24:16.482 +02:00 [INF] Hosting environment: Development
+2022-07-25 14:24:16.483 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 14:24:19.273 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/Dish - -
+2022-07-25 14:24:19.344 +02:00 [INF] Executing endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:24:19.363 +02:00 [INF] Route matched with {action = "GetDish", controller = "Dish"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetDish() on controller Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController (Devon4Net.Application.WebAPI.Implementation).
+2022-07-25 14:24:19.722 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'TodoContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.0' with options: StoreName=Todos 
+2022-07-25 14:24:19.743 +02:00 [INF] Executed action Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation) in 367.1991ms
+2022-07-25 14:24:19.753 +02:00 [INF] Executed endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:24:19.761 +02:00 [ERR] Exception Type: InvalidOperationException | Message: Cannot create a DbSet for 'Dish' because this type is not included in the model for the context. | InnerException: No InnerException exception data found
+2022-07-25 14:24:19.773 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/Dish - - - 500 0 - 504.0943ms
+2022-07-25 14:26:27.147 +02:00 [INF] Application is shutting down...
+2022-07-25 14:26:34.991 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 14:26:35.037 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:26:35.156 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:26:35.160 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 14:26:39.457 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 14:26:39.538 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 14:26:39.580 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 14:26:39.584 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 14:26:39.587 +02:00 [INF] Hosting environment: Development
+2022-07-25 14:26:39.592 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 14:26:40.122 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/Dish - -
+2022-07-25 14:26:40.178 +02:00 [INF] Executing endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:26:40.197 +02:00 [INF] Route matched with {action = "GetDish", controller = "Dish"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetDish() on controller Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController (Devon4Net.Application.WebAPI.Implementation).
+2022-07-25 14:26:40.540 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'TodoContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.0' with options: StoreName=Todos 
+2022-07-25 14:26:40.559 +02:00 [INF] Executed action Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation) in 347.2679ms
+2022-07-25 14:26:40.572 +02:00 [INF] Executed endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:26:40.583 +02:00 [ERR] Exception Type: InvalidOperationException | Message: Cannot create a DbSet for 'Dish' because this type is not included in the model for the context. | InnerException: No InnerException exception data found
+2022-07-25 14:26:40.596 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/Dish - - - 500 0 - 475.1865ms
+2022-07-25 14:28:24.204 +02:00 [INF] Application is shutting down...
+2022-07-25 14:28:31.187 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 14:28:31.233 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:28:31.344 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:28:31.351 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 14:28:35.620 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 14:28:35.694 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 14:28:35.733 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 14:28:35.737 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 14:28:35.739 +02:00 [INF] Hosting environment: Development
+2022-07-25 14:28:35.740 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 14:28:40.686 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/Dish - -
+2022-07-25 14:28:40.743 +02:00 [INF] Executing endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:28:40.761 +02:00 [INF] Route matched with {action = "GetDish", controller = "Dish"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetDish() on controller Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController (Devon4Net.Application.WebAPI.Implementation).
+2022-07-25 14:28:41.101 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'TodoContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.0' with options: StoreName=Todos 
+2022-07-25 14:28:41.114 +02:00 [INF] Executed action Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation) in 333.2395ms
+2022-07-25 14:28:41.121 +02:00 [INF] Executed endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:28:41.124 +02:00 [ERR] Exception Type: InvalidOperationException | Message: Cannot create a DbSet for 'Dish' because this type is not included in the model for the context. | InnerException: No InnerException exception data found
+2022-07-25 14:28:41.132 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/Dish - - - 500 0 - 449.3674ms
+2022-07-25 14:29:44.067 +02:00 [INF] Application is shutting down...
+2022-07-25 14:29:47.313 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 14:29:47.371 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:29:47.492 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:29:47.496 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 14:29:51.785 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 14:29:51.887 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 14:29:51.931 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 14:29:51.937 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 14:29:51.942 +02:00 [INF] Hosting environment: Development
+2022-07-25 14:29:51.948 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 14:29:52.422 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/Dish - -
+2022-07-25 14:29:52.477 +02:00 [INF] Executing endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:29:52.496 +02:00 [INF] Route matched with {action = "GetDish", controller = "Dish"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetDish() on controller Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController (Devon4Net.Application.WebAPI.Implementation).
+2022-07-25 14:29:52.853 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'TodoContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.0' with options: StoreName=Todos 
+2022-07-25 14:29:52.876 +02:00 [INF] Executed action Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation) in 364.2962ms
+2022-07-25 14:29:52.888 +02:00 [INF] Executed endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:29:52.894 +02:00 [ERR] Exception Type: InvalidOperationException | Message: Cannot create a DbSet for 'Dish' because this type is not included in the model for the context. | InnerException: No InnerException exception data found
+2022-07-25 14:29:52.908 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/Dish - - - 500 0 - 487.5722ms
+2022-07-25 14:31:27.740 +02:00 [INF] Application is shutting down...
+2022-07-25 14:31:34.603 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 14:31:34.648 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:31:34.766 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:31:34.771 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 14:31:39.046 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 14:31:39.124 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 14:31:39.166 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 14:31:39.171 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 14:31:39.176 +02:00 [INF] Hosting environment: Development
+2022-07-25 14:31:39.183 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 14:31:44.849 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/Dish - -
+2022-07-25 14:31:44.921 +02:00 [INF] Executing endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:31:44.944 +02:00 [INF] Route matched with {action = "GetDish", controller = "Dish"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetDish() on controller Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController (Devon4Net.Application.WebAPI.Implementation).
+2022-07-25 14:31:45.340 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'DishContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:6.0.0' with options: StoreName=MyThaiStar 
+2022-07-25 14:31:45.470 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Devon4Net.Application.WebAPI.Implementation.Domain.Entities.Dish, Devon4Net.Application.WebAPI.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto.DishDto, Devon4Net.Application.WebAPI.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-07-25 14:31:45.498 +02:00 [INF] Executed action Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation) in 537.3879ms
+2022-07-25 14:31:45.507 +02:00 [INF] Executed endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:31:45.519 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/Dish - - - 200 - application/json;+charset=utf-8 674.5394ms
+2022-07-25 14:32:05.774 +02:00 [INF] Application is shutting down...
+2022-07-25 14:35:27.959 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 14:35:28.002 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:35:28.128 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:35:28.133 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 14:35:32.447 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 14:35:32.572 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 14:35:32.622 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 14:35:32.628 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 14:35:32.633 +02:00 [INF] Hosting environment: Development
+2022-07-25 14:35:32.638 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\Playground\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 14:35:33.714 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/Dish - -
+2022-07-25 14:35:33.774 +02:00 [INF] Executing endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:35:33.799 +02:00 [INF] Route matched with {action = "GetDish", controller = "Dish"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetDish() on controller Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController (Devon4Net.Application.WebAPI.Implementation).
+2022-07-25 14:35:34.317 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'DishContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2022-07-25 14:35:34.794 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name]
+FROM [Dish] AS [d]
+2022-07-25 14:35:34.850 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Devon4Net.Application.WebAPI.Implementation.Domain.Entities.Dish, Devon4Net.Application.WebAPI.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto.DishDto, Devon4Net.Application.WebAPI.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-07-25 14:35:34.878 +02:00 [INF] Executed action Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation) in 1063.127ms
+2022-07-25 14:35:34.889 +02:00 [INF] Executed endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:35:34.905 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/Dish - - - 200 - application/json;+charset=utf-8 1190.2400ms
+2022-07-25 14:37:14.739 +02:00 [INF] Application is shutting down...
+2022-07-25 14:39:27.585 +02:00 [WRN] CORS Options set to allow any origin!. Please review it in production environments.
+2022-07-25 14:39:27.628 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:39:27.742 +02:00 [INF] Please setup your database in order to have the RabbitMq messaging backup feature
+2022-07-25 14:39:27.745 +02:00 [INF] RabbitMq messaging backup feature is going to be used via LiteDb
+2022-07-25 14:39:31.954 +02:00 [INF] User profile is available. Using 'C:\Users\behnes\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-25 14:39:32.035 +02:00 [WRN] Overriding address(es) 'https://localhost:7229, http://localhost:5229'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2022-07-25 14:39:32.075 +02:00 [INF] Now listening on: https://0.0.0.0:8085
+2022-07-25 14:39:32.079 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 14:39:32.081 +02:00 [INF] Hosting environment: Development
+2022-07-25 14:39:32.082 +02:00 [INF] Content root path: C:\Users\behnes\Documents\ThirdQuarter\DevonFwMTS\Templates\WebAPI\Devon4Net.Application.WebAPI\
+2022-07-25 14:40:33.821 +02:00 [INF] Request starting HTTP/2 GET https://localhost:8085/Dish - -
+2022-07-25 14:40:33.883 +02:00 [INF] Executing endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:40:33.905 +02:00 [INF] Route matched with {action = "GetDish", controller = "Dish"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetDish() on controller Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController (Devon4Net.Application.WebAPI.Implementation).
+2022-07-25 14:40:34.437 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'DishContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2022-07-25 14:40:34.888 +02:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name]
+FROM [Dish] AS [d]
+2022-07-25 14:40:34.952 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Devon4Net.Application.WebAPI.Implementation.Domain.Entities.Dish, Devon4Net.Application.WebAPI.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto.DishDto, Devon4Net.Application.WebAPI.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-07-25 14:40:34.986 +02:00 [INF] Executed action Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation) in 1067.1345ms
+2022-07-25 14:40:34.997 +02:00 [INF] Executed endpoint 'Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.GetDish (Devon4Net.Application.WebAPI.Implementation)'
+2022-07-25 14:40:35.011 +02:00 [INF] Request finished HTTP/2 GET https://localhost:8085/Dish - - - 200 - application/json;+charset=utf-8 1192.7509ms
+2022-07-25 14:40:50.705 +02:00 [INF] Application is shutting down...
