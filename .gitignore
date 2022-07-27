@@ -3,3 +3,4 @@
 *.log
 obj
 bin
+logs.db
