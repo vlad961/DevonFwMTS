@@ -13,7 +13,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
     /// <summary>
     /// Service implementation
     /// </summary>
-    public class DishService: Service<DishContext>, IDishService
+    public class DishService : Service<DishContext>, IDishService
     {
         private readonly IDishRepository _dishRepository;
 
@@ -28,6 +28,11 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
             Devon4NetLogger.Debug("GetDish from DishService");
             var result = await _dishRepository.GetDish(predicate).ConfigureAwait(false);
             return result.Select(DishConverter.ModelToDto);
+        }
+        public Task<Dish> GetDishById(long id)
+        {
+            Devon4NetLogger.Debug($"GetDishById method from service Dishservice with value : {id}");
+            return _dishRepository.GetDishById(id);
         }
     }
 }

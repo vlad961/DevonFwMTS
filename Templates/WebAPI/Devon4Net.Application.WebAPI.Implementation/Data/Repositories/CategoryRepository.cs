@@ -8,17 +8,17 @@ using Devon4Net.Application.WebAPI.Implementation.Domain.RepositoryInterfaces;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
 {
-    public class DishRepository : Repository<Dish>, IDishRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
-        public DishRepository(DishContext context) : base(context)
+        public CategoryRepository(CategoryContext context) : base(context)
         {
         }
 
-        public Task<IList<Dish>> GetDish(Expression<Func<Dish, bool>> predicate = null)
+        public Task<IList<Category>> GetCategory(Expression<Func<Category, bool>> predicate = null)
         {
             return Get(predicate);
         }
-        public Task<Dish> GetDishById(long id)
+        public Task<Category> GetCategoryById(long id)
         {
             Devon4NetLogger.Debug($"GetDishByID method from repository Dishservice with value : {id}");
             return GetFirstOrDefault(t => t.Id == id);

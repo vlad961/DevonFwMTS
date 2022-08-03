@@ -19,8 +19,11 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
 
             return new DishDto
             {
-                Id = item.Id,
-                Name = item.Name
+                DishId = item.Id,
+                DishName = item.Name,
+                DishIdImage = item.IdImage,
+                DishPrice = item.Price,
+                DishDescription = item.Description
             };
         }
 

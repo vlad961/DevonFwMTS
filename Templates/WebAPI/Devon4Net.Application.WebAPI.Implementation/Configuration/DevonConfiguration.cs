@@ -94,6 +94,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Configuration
             services.SetupDatabase<TodoContext>(configuration, "Default", DatabaseType.InMemory).ConfigureAwait(false);
             services.SetupDatabase<EmployeeContext>(configuration, "Employee", DatabaseType.InMemory).ConfigureAwait(false);
             services.SetupDatabase<DishContext>(configuration, "MyThaiStar", DatabaseType.SqlServer).ConfigureAwait(false);
+            services.SetupDatabase<CategoryContext>(configuration, "MyThaiStar", DatabaseType.SqlServer).ConfigureAwait(false);
         }
 
         private static void SetupJwtPolicies(IServiceCollection services)
