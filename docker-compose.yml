@@ -14,7 +14,9 @@ services:
         aliases: [database]
 
   dotnet-backend:
-    image: dotnet-backend
+    build: 
+      context: ./Templates/WebAPI
+      dockerfile: ./Devon4Net.Application.WebAPI/Dockerfile
     ports:
       - 8085:8085
     networks:
