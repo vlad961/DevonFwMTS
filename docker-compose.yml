@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1433:1433
+    environment:
+        SA_PASSWORD: "C@pgemini2017"
+        ACCEPT_EULA: "Y"
+    volumes:
+      - mssql-volume:/var/opt/mssql
+    networks:
+      backend-net:
+        aliases: [database]
+
+  dotnet-backend:
+    image: dotnet-backend
+    ports:
+      - 8085:8085
+    networks:
+      backend-net:
+        aliases: [backend]
+
+networks:
+  backend-net:
+
+volumes:
+  mssql-volume:
