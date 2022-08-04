@@ -4,9 +4,9 @@ using Devon4Net.Application.WebAPI.Implementation.Domain.Entities;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Domain.RepositoryInterfaces
 {
-    public interface IDishRepository : IRepository<Dish> {
-        Task<IList<Dish>> GetDish(Expression<Func<Dish, bool>> predicate = null);
-        Task<Dish> GetDishById(long id);
+    public interface ICategoryRepository : IRepository<Category> {
+        Task<IList<Category>> GetCategory(Expression<Func<Category, bool>> predicate = null);
+        Task<Category> GetCategoryById(long id);
     }
 
 }

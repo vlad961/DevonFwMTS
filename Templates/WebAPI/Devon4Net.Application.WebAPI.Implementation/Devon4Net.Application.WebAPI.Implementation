@@ -108,6 +108,34 @@
             Token
             </summary>
         </member>
+        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Controllers.CategoryController.#ctor(Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Service.ICategoryService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="CategoryService"></param>
+        </member>
+        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Converters.CategoryConverter">
+            <summary>
+            DishConverter
+            </summary>
+        </member>
+        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Converters.CategoryConverter.ModelToDto(Devon4Net.Application.WebAPI.Implementation.Domain.Entities.Category)">
+            <summary>
+            ModelToDto transformation
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Service.CategoryService">
+            <summary>
+            Service implementation
+            </summary>
+        </member>
+        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Service.ICategoryService">
+            <summary>
+            TodoService interface
+            </summary>
+        </member>
         <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.#ctor(Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Service.IDishService)">
             <summary>
             Constructor

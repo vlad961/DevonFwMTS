@@ -17,6 +17,12 @@ namespace Devon4Net.Application.WebAPI.Implementation.Domain.Entities
 
         public long Id { get; set; }
         public string Name { get; set; }
+
+        public long IdImage { get; set; }
+
+        public decimal Price { get; set; }
+
+        public string Description { get; set; }
         /*
         public string Description { get; set; }
         public decimal? Price { get; set; }
