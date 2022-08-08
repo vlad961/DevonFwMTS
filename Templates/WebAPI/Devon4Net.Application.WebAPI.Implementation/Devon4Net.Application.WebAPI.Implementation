@@ -142,17 +142,22 @@
             </summary>
             <param name="DishService"></param>
         </member>
-        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Converters.DishConverter">
+        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Converters.DishConverter.EntityToApi(Devon4Net.Application.WebAPI.Implementation.Domain.Entities.Dish)">
             <summary>
-            DishConverter
+            Transforms entity object to Dto object
+            </summary>
+            <param name="item">Entity item to be transformed to api Dto</param>
+            <returns>API Dto</returns>
+        </member>
+        <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto.DishDtoResult.extras">
+            <summary>
+            Association from DishDtoResult [simple] to ExtraDto [many]
             </summary>
         </member>
-        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Converters.DishConverter.ModelToDto(Devon4Net.Application.WebAPI.Implementation.Domain.Entities.Dish)">
+        <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto.DishDtoResult.categories">
             <summary>
-            ModelToDto transformation
+            Association from DishDtoResult [simple] to CategoryDto [many]
             </summary>
-            <param name="item"></param>
-            <returns></returns>
         </member>
         <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Service.DishService">
             <summary>

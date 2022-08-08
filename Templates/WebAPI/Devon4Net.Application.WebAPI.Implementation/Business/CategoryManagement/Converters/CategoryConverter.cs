@@ -21,7 +21,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagemen
             {
              CategoryId = item.Id,
              CategoryName = item.Name,
-             CategoryShowOrder = item.ShowOrder,
+             //CategoryShowOrder = item.ShowOrder,
              CategoryDescripton = item.Description
             };
         }

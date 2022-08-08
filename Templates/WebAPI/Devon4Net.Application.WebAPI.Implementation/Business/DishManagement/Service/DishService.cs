@@ -2,8 +2,6 @@ using System.Linq.Expressions;
 using Devon4Net.Domain.UnitOfWork.Service;
 using Devon4Net.Domain.UnitOfWork.UnitOfWork;
 using Devon4Net.Infrastructure.Log;
-using Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Converters;
-using Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto;
 using Devon4Net.Application.WebAPI.Implementation.Domain.Database;
 using Devon4Net.Application.WebAPI.Implementation.Domain.Entities;
 using Devon4Net.Application.WebAPI.Implementation.Domain.RepositoryInterfaces;
@@ -23,38 +21,28 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
             _dishRepository = uoW.Repository<IDishRepository>();
         }
 
-        public async Task<IEnumerable<DishDto>> GetDish(Expression<Func<Dish, bool>> predicate = null)
+        public async Task<List<Dish>> GetDish(Expression<Func<Dish, bool>> predicate = null)
         {
             Devon4NetLogger.Debug("GetDish from DishService");
-            var result = await _dishRepository.GetAll(predicate).ConfigureAwait(false);
 
-            foreach (var dish in result)
+            var includes = new List<string>
             {
-                foreach (var category in dish.DishCategory)
-                {
-                    Console.WriteLine(category.Id);
-                    Console.WriteLine(category.IdCategory);
-                }
-            }
-     
-            return result.Select(DishConverter.ModelToDto);
-        }
+                "DishCategory",
+                "DishCategory.IdCategoryNavigation", 
+                "DishIngredient",
+                "DishIngredient.IdIngredientNavigation",
+                "IdImageNavigation"
+            };
 
-        public async Task<IEnumerable<Dish>> GetDishByFilter(decimal maxPrice)
-        {
-            var result = await _dishRepository.GetAll().ConfigureAwait(false);
- 
-            if (maxPrice > 0)
-            {
-                result = result.Where(entity => entity.Price <= maxPrice).ToList();
-            }
+            var result = await _dishRepository.GetAllNested(includes, predicate).ConfigureAwait(false);
 
-            return result;
+            return result.ToList();
         }
 
         public Task<Dish> GetDishById(long id)
         {
             Devon4NetLogger.Debug($"GetDishById method from service Dishservice with value : {id}");
+            
             return _dishRepository.GetDishById(id);
         }
     }

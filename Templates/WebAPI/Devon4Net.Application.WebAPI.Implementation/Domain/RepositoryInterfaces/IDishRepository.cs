@@ -6,6 +6,9 @@ namespace Devon4Net.Application.WebAPI.Implementation.Domain.RepositoryInterface
 {
     public interface IDishRepository : IRepository<Dish> {
         Task<IList<Dish>> GetAll(Expression<Func<Dish, bool>> predicate = null);
+
+        Task<IList<Dish>> GetAllNested(IList<string> nestedProperties, Expression<Func<Dish, bool>> predicate = null);
+
         Task<Dish> GetDishById(long id);
     }
 

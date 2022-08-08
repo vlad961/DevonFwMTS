@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto
 {
-public class FilterDtoSearchObject
+    public class FilterDtoSearchObjectDto
     {
         [JsonProperty(PropertyName = "categories")]
         public CategorySearchDto[] Categories { get; set; }
