@@ -10,7 +10,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
 {
     public class DishRepository : Repository<Dish>, IDishRepository
     {
-        public DishRepository(DishContext context) : base(context)
+        public DishRepository(ModelContext context) : base(context)
         {
         }
 

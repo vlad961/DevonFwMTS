@@ -13,12 +13,12 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
     /// <summary>
     /// Service implementation
     /// </summary>
-    public class DishService : Service<DishContext>, IDishService
+    public class DishService : Service<ModelContext>, IDishService
     {
         private readonly IDishRepository _dishRepository;
 
         
-        public DishService(IUnitOfWork<DishContext> uoW) : base(uoW)
+        public DishService(IUnitOfWork<ModelContext> uoW) : base(uoW)
         {
             _dishRepository = uoW.Repository<IDishRepository>();
         }
