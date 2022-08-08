@@ -7,12 +7,10 @@ namespace Devon4Net.Application.WebAPI.Implementation.Domain.Entities
     {
         public Dish()
         {
-            /*
             DishCategory = new HashSet<DishCategory>();
             DishIngredient = new HashSet<DishIngredient>();
             OrderLine = new HashSet<OrderLine>();
             UserFavourite = new HashSet<UserFavourite>();
-            */
         }
 
         public long Id { get; set; }
@@ -27,12 +25,12 @@ namespace Devon4Net.Application.WebAPI.Implementation.Domain.Entities
         public string Description { get; set; }
         public decimal? Price { get; set; }
         public long? IdImage { get; set; }
+        */
 
         public Image IdImageNavigation { get; set; }
         public ICollection<DishCategory> DishCategory { get; set; }
         public ICollection<DishIngredient> DishIngredient { get; set; }
         public ICollection<OrderLine> OrderLine { get; set; }
         public ICollection<UserFavourite> UserFavourite { get; set; }
-        */
     }
 }

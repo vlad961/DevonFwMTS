@@ -5,7 +5,7 @@ using Devon4Net.Application.WebAPI.Implementation.Domain.Entities;
 namespace Devon4Net.Application.WebAPI.Implementation.Domain.RepositoryInterfaces
 {
     public interface IDishRepository : IRepository<Dish> {
-        Task<IList<Dish>> GetDish(Expression<Func<Dish, bool>> predicate = null);
+        Task<IList<Dish>> GetAll(Expression<Func<Dish, bool>> predicate = null);
         Task<Dish> GetDishById(long id);
     }
 

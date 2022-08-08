@@ -13,12 +13,12 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
     /// <summary>
     /// Service implementation
     /// </summary>
-    public class DishService : Service<DishContext>, IDishService
+    public class DishService : Service<ModelContext>, IDishService
     {
         private readonly IDishRepository _dishRepository;
 
         
-        public DishService(IUnitOfWork<DishContext> uoW) : base(uoW)
+        public DishService(IUnitOfWork<ModelContext> uoW) : base(uoW)
         {
             _dishRepository = uoW.Repository<IDishRepository>();
         }
@@ -26,9 +26,32 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
         public async Task<IEnumerable<DishDto>> GetDish(Expression<Func<Dish, bool>> predicate = null)
         {
             Devon4NetLogger.Debug("GetDish from DishService");
-            var result = await _dishRepository.GetDish(predicate).ConfigureAwait(false);
+            var result = await _dishRepository.GetAll(predicate).ConfigureAwait(false);
+
+            foreach (var dish in result)
+            {
+                foreach (var category in dish.DishCategory)
+                {
+                    Console.WriteLine(category.Id);
+                    Console.WriteLine(category.IdCategory);
+                }
+            }
+     
             return result.Select(DishConverter.ModelToDto);
         }
+
+        public async Task<IEnumerable<Dish>> GetDishByFilter(decimal maxPrice)
+        {
+            var result = await _dishRepository.GetAll().ConfigureAwait(false);
+ 
+            if (maxPrice > 0)
+            {
+                result = result.Where(entity => entity.Price <= maxPrice).ToList();
+            }
+
+            return result;
+        }
+
         public Task<Dish> GetDishById(long id)
         {
             Devon4NetLogger.Debug($"GetDishById method from service Dishservice with value : {id}");
