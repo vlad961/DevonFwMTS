@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Converters;
+using Devon4Net.Application.WebAPI.Implementation.Domain.Entities;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers
 {
@@ -52,7 +53,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [Route("/mythaistar/services/rest/Dishmanagement/v1/Dish/Search")]
+        [Route("/mythaistar/services/rest/dishmanagement/v1/dish/search")]
         public async Task<IActionResult> DishSearch([FromBody] FilterDtoSearchObjectDto filterDto)
         {
             Devon4NetLogger.Debug("Executing GetDish from controller DishController");
@@ -67,7 +68,12 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
 
             decimal maxPrice = string.IsNullOrEmpty(filterDto.MaxPrice) ? 0 : Convert.ToDecimal(filterDto.MaxPrice);
 
-            var dishQueryResult = await _DishService.GetDish((entity) => entity.Price < maxPrice);
+            var dishQueryResult = await _DishService.GetDish();
+
+            if (maxPrice > 0)
+            {
+                dishQueryResult = dishQueryResult.Where(e => e.Price < maxPrice).ToList();
+            }
 
             var result = new ResultObjectDto<DishDtoResult> {};
 
