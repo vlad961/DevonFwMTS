@@ -26,7 +26,17 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
         public async Task<IEnumerable<DishDto>> GetDish(Expression<Func<Dish, bool>> predicate = null)
         {
             Devon4NetLogger.Debug("GetDish from DishService");
-            var result = await _dishRepository.GetDish(predicate).ConfigureAwait(false);
+            var result = await _dishRepository.GetAll(predicate).ConfigureAwait(false);
+
+            foreach (var dish in result)
+            {
+                foreach (var category in dish.DishCategory)
+                {
+                    Console.WriteLine(category.Id);
+                    Console.WriteLine(category.IdCategory);
+                }
+            }
+     
             return result.Select(DishConverter.ModelToDto);
         }
         public Task<Dish> GetDishById(long id)

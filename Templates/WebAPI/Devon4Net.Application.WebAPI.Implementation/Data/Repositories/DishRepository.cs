@@ -10,13 +10,26 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
 {
     public class DishRepository : Repository<Dish>, IDishRepository
     {
-        public DishRepository(ModelContext context) : base(context)
+        private readonly IRepository<DishCategory> _dishCategoryRepository;
+
+        public DishRepository(
+            ModelContext context,
+            IRepository<DishCategory> dishCategoryRepository
+            ) : base(context)
         {
+            _dishCategoryRepository = dishCategoryRepository;
         }
 
-        public Task<IList<Dish>> GetDish(Expression<Func<Dish, bool>> predicate = null)
+        public async Task<IList<Dish>> GetAll(Expression<Func<Dish, bool>> predicate = null)
         {
-            return Get(predicate);
+            var result = await Get(predicate).ConfigureAwait(false);
+
+            foreach (var dish in result)
+            {
+                dish.DishCategory = await _dishCategoryRepository.Get(c => c.IdDish == dish.Id);
+            }
+
+            return result;
         }
         public Task<Dish> GetDishById(long id)
         {

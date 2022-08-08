@@ -32,6 +32,8 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
         public async Task<ActionResult> GetDish()
         {
             Devon4NetLogger.Debug("Executing GetDish from controller DishController");
+
+            // FILTER
             return Ok(await _DishService.GetDish().ConfigureAwait(false));
         }
 /*        public async Task<ActionResult> GetDishById(long id)
