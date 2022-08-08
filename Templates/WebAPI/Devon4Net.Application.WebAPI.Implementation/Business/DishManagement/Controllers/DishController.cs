@@ -6,6 +6,7 @@ using Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers
 {
@@ -45,7 +46,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
 
 
         [HttpPost]
-        [HttpOptions]
+        [AllowAnonymous]
         [ProducesResponseType(typeof(DishDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
