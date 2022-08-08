@@ -39,6 +39,19 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
      
             return result.Select(DishConverter.ModelToDto);
         }
+
+        public async Task<IEnumerable<Dish>> GetDishByFilter(decimal maxPrice)
+        {
+            var result = await _dishRepository.GetAll().ConfigureAwait(false);
+ 
+            if (maxPrice > 0)
+            {
+                result = result.Where(entity => entity.Price <= maxPrice).ToList();
+            }
+
+            return result;
+        }
+
         public Task<Dish> GetDishById(long id)
         {
             Devon4NetLogger.Debug($"GetDishById method from service Dishservice with value : {id}");
