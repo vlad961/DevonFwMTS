@@ -63,16 +63,32 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
 
             if (filterDto == null)
             {
-                filterDto = new FilterDtoSearchObjectDto { MaxPrice = "0", SearchBy = string.Empty };
+                filterDto = new FilterDtoSearchObjectDto { MaxPrice = 0, SearchBy = string.Empty };
             }
 
-            decimal maxPrice = string.IsNullOrEmpty(filterDto.MaxPrice) ? 0 : Convert.ToDecimal(filterDto.MaxPrice);
+            // I guess this was one of the more recent changes in the frontend.
+            // Most queries with numbers are now actually parsed in json as numbers
+            decimal maxPrice = filterDto.MaxPrice.GetValueOrDefault(0); //string.IsNullOrEmpty(filterDto.MaxPrice) ? 0 : Convert.ToDecimal(filterDto.MaxPrice);
 
             var dishQueryResult = await _DishService.GetDish();
+
+            var criteria = filterDto.SearchBy ?? String.Empty;
+
+            if (!string.IsNullOrWhiteSpace(criteria))
+            {
+                dishQueryResult = dishQueryResult.Where(e => e.Name.Contains(criteria)).ToList();
+            }
 
             if (maxPrice > 0)
             {
                 dishQueryResult = dishQueryResult.Where(e => e.Price < maxPrice).ToList();
+            }
+
+            Int32 minLikes = Convert.ToInt32(filterDto.MinLikes.GetValueOrDefault(0));
+
+            if (minLikes > 0)
+            {
+                   
             }
 
             var result = new ResultObjectDto<DishDtoResult> {};
