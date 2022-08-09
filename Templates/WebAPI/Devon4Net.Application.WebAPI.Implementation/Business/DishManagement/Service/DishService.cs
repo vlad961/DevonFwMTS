@@ -21,7 +21,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
             _dishRepository = uoW.Repository<IDishRepository>();
         }
 
-        public async Task<List<Dish>> GetDish(decimal maxPrice, int minLikes, string searchBy)
+        public async Task<List<Dish>> GetDishesMatchingCriterias(decimal maxPrice, int minLikes, string searchBy, IList<long> categoryIdList)
         {
             Devon4NetLogger.Debug("GetDish from DishService");
 
@@ -35,6 +35,11 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
             };
 
             var result = await _dishRepository.GetAllNested(includes).ConfigureAwait(false);
+
+            if (categoryIdList.Any())
+            {
+                result = result.Where(r => r.DishCategory.Any(a => categoryIdList.Contains(a.IdCategory))).ToList();
+            }
 
             if (!string.IsNullOrWhiteSpace(searchBy))
             {

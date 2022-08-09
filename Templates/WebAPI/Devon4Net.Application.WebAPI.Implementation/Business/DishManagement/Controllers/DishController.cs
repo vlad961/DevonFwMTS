@@ -54,11 +54,14 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
                 minLikes
             ) = filterDto;
 
-            var dishQueryResult = await _DishService.GetDish(maxPrice, minLikes, searchBy);
+            var categoryIds = categories.Select(c => c.Id).ToList();
+
+            var dishQueryResult = await _DishService.GetDishesMatchingCriterias(maxPrice, minLikes, searchBy, categoryIds);
 
             var result = new ResultObjectDto<DishDtoResult> {};
 
-            result.Result = dishQueryResult.Select(DishConverter.EntityToApi).ToList();
+            result.content = dishQueryResult.Select(DishConverter.EntityToApi).ToList();
+            result.Pagination.Total = dishQueryResult.Count();
 
             return new ObjectResult(JsonConvert.SerializeObject(result));
         }
