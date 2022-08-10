@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Domain.Database
 {
-    public class DishContext : DbContext
+    public class CategoryContext : DbContext
     {
-        public DishContext(DbContextOptions<DishContext> options) 
-            : base(options)
+        public CategoryContext(DbContextOptions<CategoryContext> options): base(options)
         {
         }
-        
-        public virtual DbSet<Dish> Dish { get; set; }
+
+
+        public virtual DbSet<Category> Category { get; set; }
     }
 }

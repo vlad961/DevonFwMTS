@@ -9,6 +9,8 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
     /// </summary>
     public interface IDishService
     {
-        Task<IEnumerable<DishDto>> GetDish(Expression<Func<Dish, bool>> predicate = null);
+        Task<List<Dish>> GetDishesMatchingCriterias(decimal maxPrice, int minLikes, string searchBy, IList<long> categoryIdList);
+
+        Task<Dish> GetDishById(long id);
     }
 }
