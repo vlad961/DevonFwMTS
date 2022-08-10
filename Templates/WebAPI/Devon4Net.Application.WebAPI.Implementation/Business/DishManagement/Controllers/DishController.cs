@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Converters;
+using Devon4Net.Application.WebAPI.Implementation.Domain.Entities;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers
 {
@@ -27,51 +28,41 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
             _DishService = DishService;
         }
 
-        [HttpGet]
-        [ProducesResponseType(typeof(DishDto), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult> GetDish()
-        {
-            Devon4NetLogger.Debug("Executing GetDish from controller DishController");
-
-            // FILTER
-            return Ok(await _DishService.GetDish().ConfigureAwait(false));
-        }
-        /*        public async Task<ActionResult> GetDishById(long id)
-                {
-                    Devon4NetLogger.Debug("Executing GetDishByID from controller DishController");
-                    return Ok(await _DishService.GetDishById(id).ConfigureAwait(false));
-                }*/
-
-
         [HttpPost]
         [AllowAnonymous]
         [ProducesResponseType(typeof(DishDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [Route("/mythaistar/services/rest/Dishmanagement/v1/Dish/Search")]
+        [Route("/mythaistar/services/rest/dishmanagement/v1/dish/search")]
         public async Task<IActionResult> DishSearch([FromBody] FilterDtoSearchObjectDto filterDto)
         {
-            Devon4NetLogger.Debug("Executing GetDish from controller DishController");
-
-            Devon4NetLogger.Debug("Filter-properties: \n");
-            Devon4NetLogger.Debug(JsonConvert.SerializeObject(filterDto));
-
             if (filterDto == null)
             {
-                filterDto = new FilterDtoSearchObjectDto { MaxPrice = "0", SearchBy = string.Empty };
+                filterDto = new FilterDtoSearchObjectDto { MaxPrice = 0, SearchBy = string.Empty, MinLikes = 0, Categories = new CategorySearchDto[]{} };
             }
 
-            decimal maxPrice = string.IsNullOrEmpty(filterDto.MaxPrice) ? 0 : Convert.ToDecimal(filterDto.MaxPrice);
+            // I guess this was one of the more recent changes in the frontend.
+            // Most queries with numbers are now actually parsed in json as numbers
 
-            var dishQueryResult = await _DishService.GetDish((entity) => entity.Price < maxPrice);
+            // converts and destructures the given filter-dto
+            // also converts or defaults values if necessary
+            
+            var (
+                categories,
+                searchBy,
+                maxPrice,
+                minLikes
+            ) = filterDto;
+
+            var categoryIds = categories.Select(c => c.Id).ToList();
+
+            var dishQueryResult = await _DishService.GetDishesMatchingCriterias(maxPrice, minLikes, searchBy, categoryIds);
 
             var result = new ResultObjectDto<DishDtoResult> {};
 
-            result.Result = dishQueryResult.Select(DishConverter.EntityToApi).ToList();
+            result.content = dishQueryResult.Select(DishConverter.EntityToApi).ToList();
+            result.Pagination.Total = dishQueryResult.Count();
 
             return new ObjectResult(JsonConvert.SerializeObject(result));
         }
