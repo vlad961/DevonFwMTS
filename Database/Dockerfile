@@ -5,6 +5,7 @@ ENV ACCEPT_EULA=Y
 ENV SA_PASSWORD=C@pgemini2017
 
 ENV MSSQL_TCP_PORT=1433
+
 ENV MSSQL_PID=Developer
 
 WORKDIR /src
@@ -17,3 +18,4 @@ RUN ( /opt/mssql/bin/sqlservr --accept-eula & ) | grep -q "Service Broker manage
     && pkill sqlservr
 
 EXPOSE 1433
+
