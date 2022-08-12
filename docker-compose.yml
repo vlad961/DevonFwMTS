@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1433:1433
+    environment:
+        SA_PASSWORD: "C@pgemini2017"
+        ACCEPT_EULA: "Y"
+    volumes:
+      - mssql-volume:/var/opt/mssql
+    networks:
+      backend-net:
+        aliases: [database]
+
+  dotnet-backend:
+    build: 
+      context: ./Templates/WebAPI
+      dockerfile: ./Devon4Net.Application.WebAPI/Dockerfile
+    ports:
+      - 8081:8081
+    networks:
+      backend-net:
+        aliases: [backend]
+
+networks:
+  backend-net:
+
+volumes:
+  mssql-volume:
