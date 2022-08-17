@@ -13,11 +13,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+Console.WriteLine(builder.Environment.EnvironmentName);
+Console.WriteLine(builder.Configuration["devonfw:Environment"]);
+// $env:devonfw__Environment='Production'; dotnet run; Remove-Item Env:\devonfw__Environment
+// druckt 
+// Development
+// Production
+
 builder.WebHost.InitializeDevonFw();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 
 #region devon services
 builder.Services.SetupDevonfw(builder.Configuration);

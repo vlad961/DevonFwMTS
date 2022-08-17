@@ -25,7 +25,6 @@ services:
         aliases: [backend]
     environment:
       - devonfw__Environment=Production
-      - Environment=Production
 
 networks:
   backend-net:
