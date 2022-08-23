@@ -91,9 +91,6 @@ namespace Devon4Net.Application.WebAPI.Implementation.Configuration
         /// <param name="configuration"></param>
         private static void SetupDatabase(IServiceCollection services, IConfiguration configuration)
         {
-            Console.WriteLine(configuration["devonfw:Environment"]);
-            // druckt Development
-            Console.WriteLine(configuration.GetConnectionString("MyThaiStar"));
             services.SetupDatabase<TodoContext>(configuration, "Default", DatabaseType.InMemory).ConfigureAwait(false);
             services.SetupDatabase<EmployeeContext>(configuration, "Employee", DatabaseType.InMemory).ConfigureAwait(false);
             services.SetupDatabase<ModelContext>(configuration, "MyThaiStar", DatabaseType.SqlServer).ConfigureAwait(false);
