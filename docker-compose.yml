@@ -34,7 +34,7 @@ services:
         aliases: [backend]
 
   reverse-proxy:
-    build: 'reverse-proxy/'
+    build: ./ReverseProxy
     restart: always
     container_name: 'mts_reverse_proxy'
     ports:

@@ -108,34 +108,6 @@
             Token
             </summary>
         </member>
-        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Controllers.CategoryController.#ctor(Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Service.ICategoryService)">
-            <summary>
-            Constructor
-            </summary>
-            <param name="CategoryService"></param>
-        </member>
-        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Converters.CategoryConverter">
-            <summary>
-            DishConverter
-            </summary>
-        </member>
-        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Converters.CategoryConverter.ModelToDto(Devon4Net.Application.WebAPI.Implementation.Domain.Entities.Category)">
-            <summary>
-            ModelToDto transformation
-            </summary>
-            <param name="item"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Service.CategoryService">
-            <summary>
-            Service implementation
-            </summary>
-        </member>
-        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Service.ICategoryService">
-            <summary>
-            TodoService interface
-            </summary>
-        </member>
         <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.#ctor(Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Service.IDishService)">
             <summary>
             Constructor
@@ -380,18 +352,18 @@
         </member>
         <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagement.Validators.EmployeeFluentValidator">
             <summary>
-            
+            EmployeeFluentValidator implementation
             </summary>
         </member>
         <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagement.Validators.EmployeeFluentValidator.#ctor(System.Boolean)">
             <summary>
-            
+            EmployeeFluentValidator constructor
             </summary>
-            <param name="launchExceptionWhenError"></param>
+            <param name="launchExceptionWhenError">Please set to false to not launching an exception</param>
         </member>
         <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagement.Validators.EmployeeFluentValidator.CustomValidate">
             <summary>
-            
+            Custom validation for EmployeeDto
             </summary>
         </member>
         <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.MediatRManagement.Commands.CreateTodoCommand">
@@ -597,7 +569,7 @@
             Please setup your RabbitMq server in the configuration file
             </summary>
         </member>
-        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.RabbitMqManagement.Controllers.RabbitMqController.#ctor(Devon4Net.Application.WebAPI.Implementation.Business.RabbitMqManagement.Handlers.TodoRabbitMqHandler,Microsoft.Extensions.Options.IOptions{Devon4Net.Infrastructure.Common.Options.RabbitMq.RabbitMqOptions})">
+        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.RabbitMqManagement.Controllers.RabbitMqController.#ctor(Devon4Net.Application.WebAPI.Implementation.Business.RabbitMqManagement.Handlers.TodoRabbitMqHandler,Microsoft.Extensions.Options.IOptions{Devon4Net.Infrastructure.RabbitMQ.Options.RabbitMqOptions})">
             <summary>
             Class constructor
             </summary>
@@ -814,18 +786,18 @@
         </member>
         <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.TodoManagement.Validators.TodosFluentValidator">
             <summary>
-            
+            TodosFluentValidator implementation
             </summary>
         </member>
         <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.TodoManagement.Validators.TodosFluentValidator.#ctor(System.Boolean)">
             <summary>
-            
+            TodosFluentValidator constructor
             </summary>
-            <param name="launchExceptionWhenError"></param>
+            <param name="launchExceptionWhenError">Please set to false to not launching an exception</param>
         </member>
         <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.TodoManagement.Validators.TodosFluentValidator.CustomValidate">
             <summary>
-            
+            Custom validation for TodoDto
             </summary>
         </member>
         <member name="T:Devon4Net.Application.WebAPI.Implementation.Configuration.DevonConfiguration">
@@ -900,12 +872,11 @@
             Repository implementation for the TODOS
             </summary>
         </member>
-        <member name="M:Devon4Net.Application.WebAPI.Implementation.Data.Repositories.TodoRepository.#ctor(Devon4Net.Application.WebAPI.Implementation.Domain.Database.TodoContext,Devon4Net.Application.WebAPI.Implementation.Business.TodoManagement.Validators.TodosFluentValidator)">
+        <member name="M:Devon4Net.Application.WebAPI.Implementation.Data.Repositories.TodoRepository.#ctor(Devon4Net.Application.WebAPI.Implementation.Domain.Database.TodoContext)">
             <summary>
             TodosFluentValidator
             </summary>
             <param name="context"></param>
-            <param name="todosValidator"></param>
         </member>
         <member name="M:Devon4Net.Application.WebAPI.Implementation.Data.Repositories.TodoRepository.GetTodo(System.Linq.Expressions.Expression{System.Func{Devon4Net.Application.WebAPI.Implementation.Domain.Entities.Todos,System.Boolean}})">
             <summary>

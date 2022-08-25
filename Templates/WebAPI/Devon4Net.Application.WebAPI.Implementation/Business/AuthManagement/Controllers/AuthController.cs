@@ -2,7 +2,7 @@
 using Devon4Net.Application.WebAPI.Implementation.Business.AuthManagement.Dto;
 using Devon4Net.Infrastructure.JWT.Common.Const;
 using Devon4Net.Infrastructure.JWT.Handlers;
-using Devon4Net.Infrastructure.Log;
+using Devon4Net.Infrastructure.Logger.Logging;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +17,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.AuthManagement.Co
     [Route("[controller]")]
     public class AuthController : ControllerBase
     {
-        private IJwtHandler JwtHandler { get; set; }
+        private IJwtHandler JwtHandler { get; }
 
         /// <summary>
         /// Constructor with DI
@@ -43,9 +43,14 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.AuthManagement.Co
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Login(string user, string password)
         {
+            if (string.IsNullOrWhiteSpace(user) || string.IsNullOrWhiteSpace(password))
+            {
+                return BadRequest("The user name of password can not be empty");
+            }
+
             Devon4NetLogger.Debug("Executing Login from controller AuthController");
 
-            var token = JwtHandler.CreateClientToken(new List<Claim>
+            var token = JwtHandler.CreateJwtToken(new List<Claim>
             {
                 new Claim(ClaimTypes.Role, AuthConst.DevonSampleUserRole),
                 new Claim(ClaimTypes.Name,user),
