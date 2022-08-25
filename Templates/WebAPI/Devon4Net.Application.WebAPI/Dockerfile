@@ -11,6 +11,7 @@ COPY ["Devon4Net.Application.WebAPI/Devon4Net.Application.WebAPI.csproj", "Devon
 RUN dotnet restore "Devon4Net.Application.WebAPI/Devon4Net.Application.WebAPI.csproj"
 COPY . .
 WORKDIR "/src/Devon4Net.Application.WebAPI"
+RUN echo '{\n\t"ConnectionStrings": {\n\t\t"MyThaiStar": "Server=sql-server;Database=MyThaiStar;User=sa;Password=C@pgemini2017"\n\t}\n}' >> appsettingsExtra.json
 RUN dotnet build "Devon4Net.Application.WebAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish

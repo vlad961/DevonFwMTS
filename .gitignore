@@ -7,3 +7,5 @@ logs
 
 FrontEnd/node_modules
 FrontEnd/dist
+
+.vs
