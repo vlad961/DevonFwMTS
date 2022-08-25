@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
+using Devon4Net.Infrastructure.Logger.Logging;
 using Devon4Net.Domain.UnitOfWork.Service;
 using Devon4Net.Domain.UnitOfWork.UnitOfWork;
-using Devon4Net.Infrastructure.Log;
 using Devon4Net.Application.WebAPI.Implementation.Domain.Database;
 using Devon4Net.Application.WebAPI.Implementation.Domain.Entities;
 using Devon4Net.Application.WebAPI.Implementation.Domain.RepositoryInterfaces;
