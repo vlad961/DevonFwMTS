@@ -108,6 +108,34 @@
             Token
             </summary>
         </member>
+        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Controllers.CategoryController.#ctor(Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Service.ICategoryService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="CategoryService"></param>
+        </member>
+        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Converters.CategoryConverter">
+            <summary>
+            DishConverter
+            </summary>
+        </member>
+        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Converters.CategoryConverter.ModelToDto(Devon4Net.Application.WebAPI.Implementation.Domain.Entities.Category)">
+            <summary>
+            ModelToDto transformation
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Service.CategoryService">
+            <summary>
+            Service implementation
+            </summary>
+        </member>
+        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagement.Service.ICategoryService">
+            <summary>
+            TodoService interface
+            </summary>
+        </member>
         <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Controllers.DishController.#ctor(Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Service.IDishService)">
             <summary>
             Constructor
@@ -139,6 +167,38 @@
         <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Service.IDishService">
             <summary>
             TodoService interface
+            </summary>
+        </member>
+        <member name="M:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Converters.DishNosqlConverter.ModelToDto(DishNosql)">
+            <summary>
+            ModelToDto transformation
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Dto.DishNosqlDto.Id">
+            <summary>
+            the Id
+            </summary>
+        </member>
+        <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Dto.DishNosqlDto.Name">
+            <summary>
+            the Name
+            </summary>
+        </member>
+        <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Dto.DishNosqlDto.Description">
+            <summary>
+            the Surname
+            </summary>
+        </member>
+        <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Dto.DishNosqlDto.Price">
+            <summary>
+            the Mail
+            </summary>
+        </member>
+        <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Service.IDishNosqlService">
+            <summary>
+            DishNosqlService interface
             </summary>
         </member>
         <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagement.Controllers.EmployeeController">
