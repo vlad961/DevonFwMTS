@@ -13,11 +13,12 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
 
         public DishNosqlRepository()
         {
+            //TODO: Add the connectionstring into appsettings.developement.json
             var settings = MongoClientSettings.FromConnectionString("mongodb://localhost:27017");
             _mongoClient = new MongoClient(settings);
             var camelCaseConvention = new ConventionPack { new CamelCaseElementNameConvention() };
             ConventionRegistry.Register("CamelCase", camelCaseConvention, type => true);
-            _dishNosqlCollection = _mongoClient.GetDatabase("my_thai_star").GetCollection<DishNosql>("Dish");
+            _dishNosqlCollection = _mongoClient.GetDatabase("my_thai_star_progress").GetCollection<DishNosql>("Dish");
 
         }
 

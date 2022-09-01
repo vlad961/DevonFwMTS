@@ -188,12 +188,22 @@
         </member>
         <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Dto.DishNosqlDto.Description">
             <summary>
-            the Surname
+            the Description
             </summary>
         </member>
         <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Dto.DishNosqlDto.Price">
             <summary>
-            the Mail
+            the Price
+            </summary>
+        </member>
+        <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Dto.DishNosqlDto.Image">
+            <summary>
+            the Image
+            </summary>
+        </member>
+        <member name="P:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Dto.DishNosqlDto.Category">
+            <summary>
+            the Categories
             </summary>
         </member>
         <member name="T:Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Service.IDishNosqlService">

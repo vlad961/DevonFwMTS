@@ -28,11 +28,6 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManageme
         public async Task<List<DishNosqlDto>> Get()
         {
             var result = await _dishNosqlService.GetAsync();
-            foreach (var item in result)
-            {
-                Console.WriteLine("YASH:" + item);
-            }
-
             return result.Select(DishNosqlConverter.ModelToDto).ToList();
         }
     }

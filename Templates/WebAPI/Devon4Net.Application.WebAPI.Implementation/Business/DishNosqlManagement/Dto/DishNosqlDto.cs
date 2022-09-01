@@ -22,17 +22,24 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManageme
         public string Name { get; set; }
 
         /// <summary>
-        /// the Surname
+        /// the Description
         /// </summary>
         [Required]
         public string Description { get; set; }
 
         /// <summary>
-        /// the Mail
+        /// the Price
         /// </summary>
         [Required]
         public decimal Price { get; set; }
+        /// <summary>
+        /// the Image
+        /// </summary>
+        public ImageNosql[] Image { get; set; }
 
-        public ImageNosql Image { get; set; }
+        /// <summary>
+        /// the Categories
+        /// </summary>
+        public CategoryNosql[][] Category { get; set; }
     }
 }

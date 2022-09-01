@@ -1,9 +1,11 @@
 ﻿using Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Dto;
 using Devon4Net.Application.WebAPI.Implementation.Domain.Entities;
+
 namespace Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManagement.Converters
 {
     public class DishNosqlConverter
     {
+
         /// <summary>
         /// ModelToDto transformation
         /// </summary>
@@ -19,7 +21,8 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishNosqlManageme
                 Name = item.Name,
                 Description = item.Description,
                 Price = item.Price,
-                Image = item.Image
+                Image = item.Image,
+                Category = item.Category
             };
         }
     }

@@ -7,3 +7,4 @@ logs
 FrontEnd/node_modules
 FrontEnd/dist
 .vs/
+Templates/WebAPI/Devon4Net.Application.WebAPI.Implementation/Migrations/SqlServerMigrations
