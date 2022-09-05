@@ -1,15 +1,23 @@
+using Newtonsoft.Json;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto
 {
 
     public class ImageDto
     {
-        public long id { get; set; }
-        public int? modificationCounter { get; set; }
-        public object revision { get; set; }
-        public string name { get; set; }
-        public string content { get; set; }
-        public string contentType { get; set; }
-        public string mimeType { get; set; }
+        [JsonProperty(PropertyName = "id")]
+        public long Id { get; set; }
+        [JsonProperty(PropertyName = "modificationCounter")]
+        public int? ModificationCounter { get; set; }
+        [JsonProperty(PropertyName = "revision")]
+        public object Revision { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        [JsonProperty(PropertyName = "content")]
+        public string Content { get; set; }
+        [JsonProperty(PropertyName = "contentType")]
+        public string ContentType { get; set; }
+        [JsonProperty(PropertyName = "mimeType")]
+        public string MimeType { get; set; }
     }
 }

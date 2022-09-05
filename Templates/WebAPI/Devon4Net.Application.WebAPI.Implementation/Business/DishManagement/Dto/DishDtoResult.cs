@@ -3,8 +3,8 @@ using Newtonsoft.Json;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Dto
 {
-public class DishDtoResult
-    {                			
+    public class DishDtoResult
+    {
         [JsonProperty(PropertyName = "dish")]
         public DishDto dish { get; set; }
 
@@ -28,11 +28,11 @@ public class DishDtoResult
 
 
 
-        public	DishDtoResult()
+        public DishDtoResult()
         {
             extras = new HashSet<ExtraDto>();
             categories = new HashSet<CategoryDto>();
-            
+
         }
     }
 }

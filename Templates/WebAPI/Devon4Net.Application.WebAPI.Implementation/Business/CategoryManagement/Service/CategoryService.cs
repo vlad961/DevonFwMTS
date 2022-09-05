@@ -15,24 +15,23 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagemen
     /// </summary>
     public class CategoryService: Service<CategoryContext>, ICategoryService
     {
-        private readonly ICategoryRepository _CategoryRepository;
-
+        private readonly ICategoryRepository _categoryRepository;
         
         public CategoryService(IUnitOfWork<CategoryContext> uoW) : base(uoW)
         {
-            _CategoryRepository = uoW.Repository<ICategoryRepository>();
+            _categoryRepository = uoW.Repository<ICategoryRepository>();
         }
 
         public async Task<IEnumerable<CategoryDto>> GetCategory(Expression<Func<Category, bool>> predicate = null)
         {
             Devon4NetLogger.Debug("GetCategory from CategoryService");
-            var result = await _CategoryRepository.GetCategory(predicate).ConfigureAwait(false);
+            var result = await _categoryRepository.GetCategory(predicate).ConfigureAwait(false);
             return result.Select(CategoryConverter.ModelToDto);
         }
         public Task<Category> GetCategoryById(long id)
         {
             Devon4NetLogger.Debug($"GetCategoryById method from service Categoryservice with value : {id}");
-            return _CategoryRepository.GetCategoryById(id);
+            return _categoryRepository.GetCategoryById(id);
         }
     }
 }

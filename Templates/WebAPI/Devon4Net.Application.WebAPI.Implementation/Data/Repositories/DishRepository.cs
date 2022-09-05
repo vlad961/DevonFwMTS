@@ -21,19 +21,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
             _dishCategoryRepository = dishCategoryRepository;
             _dishIngredientRepository = dishIngredientRepository;
         }
-
-        public async Task<IList<Dish>> GetAll(Expression<Func<Dish, bool>> predicate = null)
-        {
-            var result = await Get(predicate).ConfigureAwait(false);
-
-            foreach (var dish in result)
-            {
-                dish.DishCategory = await _dishCategoryRepository.Get(c => c.IdDish == dish.Id);
-                dish.DishIngredient = await _dishIngredientRepository.Get(c => c.IdDish == dish.Id);
-            }
-
-            return result;
-        }
+        
         public Task<Dish> GetDishById(long id)
         {
             Devon4NetLogger.Debug($"GetDishByID method from repository Dishservice with value : {id}");

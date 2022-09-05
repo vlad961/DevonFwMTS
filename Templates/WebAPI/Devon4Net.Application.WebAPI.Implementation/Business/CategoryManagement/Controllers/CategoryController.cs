@@ -13,7 +13,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagemen
     [EnableCors("CorsPolicy")]
     public class CategoryController : ControllerBase
     {
-        private readonly ICategoryService _CategoryService;
+        private readonly ICategoryService _categoryService;
 
         /// <summary>
         /// Constructor
@@ -21,7 +21,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagemen
         /// <param name="CategoryService"></param>
         public CategoryController(ICategoryService CategoryService)
         {
-            _CategoryService = CategoryService;
+            _categoryService = CategoryService;
         }
 
         [HttpGet]
@@ -32,7 +32,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.CategoryManagemen
         public async Task<ActionResult> GetCategory()
         {
             Devon4NetLogger.Debug("Executing GetCategory from controller CategoryController");
-            return Ok(await _CategoryService.GetCategory().ConfigureAwait(false));
+            return Ok(await _categoryService.GetCategory().ConfigureAwait(false));
         }
 
     }

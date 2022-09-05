@@ -16,7 +16,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
     [EnableCors("CorsPolicy")]
     public class DishController : ControllerBase
     {
-        private readonly IDishService _DishService;
+        private readonly IDishService _dishService;
 
         /// <summary>
         /// Constructor
@@ -24,7 +24,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
         /// <param name="DishService"></param>
         public DishController(IDishService DishService)
         {
-            _DishService = DishService;
+            _dishService = DishService;
         }
 
         [HttpPost]
@@ -56,7 +56,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
 
             var categoryIds = categories.Select(c => c.Id).ToList();
 
-            var dishQueryResult = await _DishService.GetDishesMatchingCriterias(maxPrice, minLikes, searchBy, categoryIds);
+            var dishQueryResult = await _dishService.GetDishesMatchingCriterias(maxPrice, minLikes, searchBy, categoryIds);
 
             var result = new ResultObjectDto<DishDtoResult> {};
 

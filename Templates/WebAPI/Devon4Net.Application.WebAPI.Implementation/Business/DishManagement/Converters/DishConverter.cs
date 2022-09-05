@@ -37,12 +37,12 @@ public class DishConverter
                 {
                     result.Add(new ExtraDto
                     {
-                        id = item.IdIngredient,
-                        description = item.IdIngredientNavigation.Description,
-                        price = item.IdIngredientNavigation.Price,
-                        modificationCounter = item.ModificationCounter,
-                        revision = 1,
-                        name = item.IdIngredientNavigation.Name
+                        Id = item.IdIngredient,
+                        Description = item.IdIngredientNavigation.Description,
+                        Price = item.IdIngredientNavigation.Price,
+                        ModificationCounter = item.ModificationCounter,
+                        Revision = 1,
+                        Name = item.IdIngredientNavigation.Name
                     });
                 }
             }
@@ -66,12 +66,12 @@ public class DishConverter
                 {
                     result.Add(new CategoryDto
                     {
-                        id = item.IdCategory,
-                        description = item.IdCategoryNavigation.Description,
-                        modificationCounter = item.IdCategoryNavigation.ModificationCounter,
-                        revision = 1,
-                        name = item.IdCategoryNavigation.Name,
-                        showOrder = item.IdCategoryNavigation.ShowOrder
+                        Id = item.IdCategory,
+                        Description = item.IdCategoryNavigation.Description,
+                        ModificationCounter = item.IdCategoryNavigation.ModificationCounter,
+                        Revision = 1,
+                        Name = item.IdCategoryNavigation.Name,
+                        ShowOrder = item.IdCategoryNavigation.ShowOrder
                     });
 
                 }
@@ -88,12 +88,12 @@ public class DishConverter
         {
             return new DishDto
             {
-                id = item.Id,
-                description = item.Description,
-                name = item.Name,
-                price = item.Price,
-                imageId = item.IdImage,
-                modificationCounter = 0
+                Id = item.Id,
+                Description = item.Description,
+                Name = item.Name,
+                Price = item.Price,
+                ImageId = item.IdImage,
+                ModificationCounter = 0
             };
         }
 
@@ -106,13 +106,13 @@ public class DishConverter
             {
                 result = new ImageDto
                 {
-                    content = image.Content,
-                    modificationCounter = image.ModificationCounter,
-                    mimeType = image.MimeType,
-                    name = image.Name,
-                    id = image.Id,
-                    contentType = image.ContentType == 0 ? "Binary" : "Url",
-                    revision = 1
+                    Content = image.Content,
+                    ModificationCounter = image.ModificationCounter,
+                    MimeType = image.MimeType,
+                    Name = image.Name,
+                    Id = image.Id,
+                    ContentType = image.ContentType == 0 ? "Binary" : "Url",
+                    Revision = 1
                 };
             }
             catch (Exception ex)
