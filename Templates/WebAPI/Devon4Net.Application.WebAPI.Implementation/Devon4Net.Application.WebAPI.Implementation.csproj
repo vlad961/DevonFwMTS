@@ -42,5 +42,4 @@
     <Folder Include="Business\CyberArkManagement\" />
     <Folder Include="Business\SmaxHcmrManagement\Controllers\" />
   </ItemGroup>
-
 </Project>
