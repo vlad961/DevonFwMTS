@@ -13,13 +13,9 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
         private readonly IRepository<DishIngredient> _dishIngredientRepository;
 
         public DishRepository(
-            ModelContext context,
-            IRepository<DishCategory> dishCategoryRepository,
-            IRepository<DishIngredient> dishIngredientRepository
+            ModelContext context
             ) : base(context)
         {
-            _dishCategoryRepository = dishCategoryRepository;
-            _dishIngredientRepository = dishIngredientRepository;
         }
         
         public Task<Dish> GetDishById(long id)
