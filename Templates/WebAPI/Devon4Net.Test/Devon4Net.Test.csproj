@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Test\BaseManagementTest.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="3.1.2">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -47,7 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Devon4Net.Application.WebAPI\Devon4Net.Application.WebAPI.csproj" />
-    <ProjectReference Include="..\..\Devon4Net.Application.WebAPI.Implementation\Devon4Net.Application.WebAPI.Implementation.csproj" />
+    <ProjectReference Include="..\Devon4Net.Application.WebAPI\Devon4Net.Application.WebAPI.csproj" />
+    <ProjectReference Include="..\Devon4Net.Application.WebAPI.Implementation\Devon4Net.Application.WebAPI.Implementation.csproj" />
   </ItemGroup>
 </Project>
