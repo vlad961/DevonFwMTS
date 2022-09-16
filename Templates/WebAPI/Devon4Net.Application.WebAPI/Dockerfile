@@ -16,7 +16,8 @@ RUN dotnet build "Devon4Net.Application.WebAPI.csproj" -c Release -o /app/build
 
 FROM build as test
 WORKDIR /src/Devon4Net.Test
-RUN dotnet test
+# only the last CMD in a dockerfile will be executed, so this step gets skipped
+CMD ["dotnet", "test"]
 
 FROM build AS publish
 RUN dotnet publish "Devon4Net.Application.WebAPI.csproj" -c Release -o /app/publish
@@ -24,4 +25,5 @@ RUN dotnet publish "Devon4Net.Application.WebAPI.csproj" -c Release -o /app/publ
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Devon4Net.Application.WebAPI.dll"]
+# since only the last CMD will be executed, this will be the default
+CMD ["dotnet", "Devon4Net.Application.WebAPI.dll"]

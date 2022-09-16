@@ -9,9 +9,6 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
 {
     public class DishRepository : Repository<Dish>, IDishRepository
     {
-        private readonly IRepository<DishCategory> _dishCategoryRepository;
-        private readonly IRepository<DishIngredient> _dishIngredientRepository;
-
         public DishRepository(
             ModelContext context
             ) : base(context)
@@ -24,8 +21,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
             
             return GetFirstOrDefault(t => t.Id == id);
         }
-
-
+        
         public async Task<IList<Dish>> GetAllNested(IList<string> nestedProperties, Expression<Func<Dish, bool>> predicate = null) 
         {
             return await Get(nestedProperties, predicate);
