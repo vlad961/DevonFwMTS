@@ -5,7 +5,7 @@ using Devon4Net.Application.WebAPI.Implementation.Domain.Entities;
 
 namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Converters
 {
-public class DishConverter
+    public class DishConverter
     {
         /// <summary>
         /// Transforms entity object to Dto object

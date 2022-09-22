@@ -12,11 +12,11 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 namespace Devon4Net.Test.xUnit.Test.UnitTest.Business
 {
-    public class DishServiceTest: UnitTest
-    {   
+    public class DishServiceTest : UnitTest
+    {
         [Fact]
         public async void getDishesMatchingCriterias_Returns_Price_Less_Than_6()
-        {   
+        {
             //Arrange
             IList<Dish> dishList = new List<Dish>();
 
@@ -38,7 +38,7 @@ namespace Devon4Net.Test.xUnit.Test.UnitTest.Business
 
             var uowMock = new Mock<IUnitOfWork<ModelContext>>();
             var dishRepositoryMock = new Mock<IDishRepository>();
-            dishRepositoryMock.Setup( 
+            dishRepositoryMock.Setup(
                 repository => repository.GetAllNested(
                     It.IsAny<IList<String>>(),
                     It.IsAny<Expression<Func<Dish, bool>>>()
@@ -50,22 +50,22 @@ namespace Devon4Net.Test.xUnit.Test.UnitTest.Business
             DishService dishService = new DishService(uowMock.Object);
             decimal maxPrice = 6;
             int minLikes = 0;
-            string searchBy= "";
+            string searchBy = "";
             IList<long> categoryIdList = new List<long>();
-            
+
             var expectedList = new List<Dish>();
             expectedList.Add(dish3);
             var expectedResult = await Task.FromResult(expectedList);
             //Act
-            var result = await dishService.GetDishesMatchingCriterias(maxPrice,minLikes,searchBy,categoryIdList);
-            
+            var result = await dishService.GetDishesMatchingCriterias(maxPrice, minLikes, searchBy, categoryIdList);
+
             //Assert
-            Assert.Equal(expectedResult,result);
+            Assert.Equal(expectedResult, result);
         }
 
         [Fact]
         public async void getDishesMatchingCriterias_Where_CategoryId_Is_1()
-        {   
+        {
             //Arrange
             IList<Dish> dishList = new List<Dish>();
             DishCategory category1 = new DishCategory();
@@ -95,7 +95,7 @@ namespace Devon4Net.Test.xUnit.Test.UnitTest.Business
 
             var uowMock = new Mock<IUnitOfWork<ModelContext>>();
             var dishRepositoryMock = new Mock<IDishRepository>();
-            dishRepositoryMock.Setup( 
+            dishRepositoryMock.Setup(
                 repository => repository.GetAllNested(
                     It.IsAny<IList<String>>(),
                     It.IsAny<Expression<Func<Dish, bool>>>()
@@ -107,24 +107,24 @@ namespace Devon4Net.Test.xUnit.Test.UnitTest.Business
             DishService dishService = new DishService(uowMock.Object);
             decimal maxPrice = 0;
             int minLikes = 0;
-            string searchBy= "";
+            string searchBy = "";
             IList<long> categoryIdList = new List<long>();
             categoryIdList.Add(1);
-            
+
             var expectedList = new List<Dish>();
             expectedList.Add(dish1);
             expectedList.Add(dish3);
             var expectedResult = await Task.FromResult(expectedList);
             //Act
-            var result = await dishService.GetDishesMatchingCriterias(maxPrice,minLikes,searchBy,categoryIdList);
-            
+            var result = await dishService.GetDishesMatchingCriterias(maxPrice, minLikes, searchBy, categoryIdList);
+
             //Assert
-            Assert.Equal(expectedResult,result);
+            Assert.Equal(expectedResult, result);
         }
 
         [Fact]
         public async void getDishesMatchingCriterias_SearchBy()
-        {   
+        {
             //Arrange
             IList<Dish> dishList = new List<Dish>();
             DishCategory category1 = new DishCategory();
@@ -154,7 +154,7 @@ namespace Devon4Net.Test.xUnit.Test.UnitTest.Business
 
             var uowMock = new Mock<IUnitOfWork<ModelContext>>();
             var dishRepositoryMock = new Mock<IDishRepository>();
-            dishRepositoryMock.Setup( 
+            dishRepositoryMock.Setup(
                 repository => repository.GetAllNested(
                     It.IsAny<IList<String>>(),
                     It.IsAny<Expression<Func<Dish, bool>>>()
@@ -166,23 +166,23 @@ namespace Devon4Net.Test.xUnit.Test.UnitTest.Business
             DishService dishService = new DishService(uowMock.Object);
             decimal maxPrice = 0;
             int minLikes = 0;
-            string searchBy= "salad";
+            string searchBy = "salad";
             IList<long> categoryIdList = new List<long>();
-            
-            
+
+
             var expectedList = new List<Dish>();
             expectedList.Add(dish3);
-            
+
             var expectedResult = await Task.FromResult(expectedList);
             //Act
-            var result = await dishService.GetDishesMatchingCriterias(maxPrice,minLikes,searchBy,categoryIdList);
-            
+            var result = await dishService.GetDishesMatchingCriterias(maxPrice, minLikes, searchBy, categoryIdList);
+
             //Assert
-            Assert.Equal(expectedResult,result);
+            Assert.Equal(expectedResult, result);
         }
         [Fact]
         public async void getDishByIdTest()
-        {   
+        {
             //Arrange
             long searchedId = 1;
 
@@ -192,7 +192,7 @@ namespace Devon4Net.Test.xUnit.Test.UnitTest.Business
 
             var uowMock = new Mock<IUnitOfWork<ModelContext>>();
             var dishRepositoryMock = new Mock<IDishRepository>();
-            dishRepositoryMock.Setup( 
+            dishRepositoryMock.Setup(
                 repository => repository.GetDishById(
                     It.IsAny<long>()
                 )).Returns(
@@ -210,7 +210,7 @@ namespace Devon4Net.Test.xUnit.Test.UnitTest.Business
                     It.IsAny<long>()
                     ),
                     Times.Once());
-            Assert.Equal(dish,result);
+            Assert.Equal(dish, result);
 
         }
     }

@@ -5,7 +5,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Domain.Database
 {
     public class ModelContext : DbContext
     {
-        public ModelContext(DbContextOptions<ModelContext> options) 
+        public ModelContext(DbContextOptions<ModelContext> options)
             : base(options)
         {
         }

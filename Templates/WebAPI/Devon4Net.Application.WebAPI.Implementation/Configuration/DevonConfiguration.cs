@@ -81,7 +81,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Configuration
 
         private static void SetupFluentValidators(IServiceCollection services)
         {
-            services.AddFluentValidation< IValidator<TodoDto>, TodosFluentValidator>();
+            services.AddFluentValidation<IValidator<TodoDto>, TodosFluentValidator>();
             services.AddFluentValidation<IValidator<EmployeeDto>, EmployeeFluentValidator>();
         }
 

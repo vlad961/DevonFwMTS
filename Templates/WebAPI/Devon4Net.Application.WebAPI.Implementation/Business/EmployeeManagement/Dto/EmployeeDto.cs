@@ -11,7 +11,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagemen
         /// the Id
         /// </summary>
         public long Id { get; set; }
-        
+
         /// <summary>
         /// the Name
         /// </summary>

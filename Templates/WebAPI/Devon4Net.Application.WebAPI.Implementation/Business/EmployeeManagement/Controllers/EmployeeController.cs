@@ -14,7 +14,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagemen
     [ApiController]
     [Route("[controller]")]
     [EnableCors("CorsPolicy")]
-    public class EmployeeController: ControllerBase
+    public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
 
@@ -22,7 +22,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagemen
         /// Constructor
         /// </summary>
         /// <param name="employeeService"></param>
-        public EmployeeController( IEmployeeService employeeService)
+        public EmployeeController(IEmployeeService employeeService)
         {
             _employeeService = employeeService;
         }
@@ -67,7 +67,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagemen
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult> Delete([Required]long employeeId)
+        public async Task<ActionResult> Delete([Required] long employeeId)
         {
             Devon4NetLogger.Debug("Executing GetEmployee from controller EmployeeController");
             return Ok(await _employeeService.DeleteEmployeeById(employeeId).ConfigureAwait(false));

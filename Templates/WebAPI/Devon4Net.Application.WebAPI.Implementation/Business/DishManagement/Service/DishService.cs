@@ -15,7 +15,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
     {
         private readonly IDishRepository _dishRepository;
 
-        
+
         public DishService(IUnitOfWork<ModelContext> uoW) : base(uoW)
         {
             _dishRepository = uoW.Repository<IDishRepository>();
@@ -28,7 +28,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
             var includes = new List<string>
             {
                 "DishCategory",
-                "DishCategory.IdCategoryNavigation", 
+                "DishCategory.IdCategoryNavigation",
                 "DishIngredient",
                 "DishIngredient.IdIngredientNavigation",
                 "IdImageNavigation"
@@ -53,7 +53,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
 
             if (minLikes > 0)
             {
-                   
+
             }
 
             return result.ToList();
@@ -62,7 +62,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Se
         public Task<Dish> GetDishById(long id)
         {
             Devon4NetLogger.Debug($"GetDishById method from service Dishservice with value : {id}");
-            
+
             return _dishRepository.GetDishById(id);
         }
     }

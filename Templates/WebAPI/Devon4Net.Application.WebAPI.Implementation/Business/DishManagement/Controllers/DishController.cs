@@ -38,7 +38,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
         {
             if (filterDto == null)
             {
-                filterDto = new FilterDtoSearchObjectDto { MaxPrice = 0, SearchBy = string.Empty, MinLikes = 0, Categories = new CategorySearchDto[]{} };
+                filterDto = new FilterDtoSearchObjectDto { MaxPrice = 0, SearchBy = string.Empty, MinLikes = 0, Categories = new CategorySearchDto[] { } };
             }
 
             // I guess this was one of the more recent changes in the frontend.
@@ -46,7 +46,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
 
             // converts and destructures the given filter-dto
             // also converts or defaults values if necessary
-            
+
             var (
                 categories,
                 searchBy,
@@ -58,7 +58,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.DishManagement.Co
 
             var dishQueryResult = await _dishService.GetDishesMatchingCriterias(maxPrice, minLikes, searchBy, categoryIds);
 
-            var result = new ResultObjectDto<DishDtoResult> {};
+            var result = new ResultObjectDto<DishDtoResult> { };
 
             result.content = dishQueryResult.Select(DishConverter.EntityToApi).ToList();
             result.Pagination.Total = dishQueryResult.Count();

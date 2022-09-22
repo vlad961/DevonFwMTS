@@ -52,7 +52,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
         public Task<Employee> Create(string name, string surName, string mail)
         {
             Devon4NetLogger.Debug($"SetEmployee method from repository Employeeervice with value : {name}");
-            return Create(new Employee{Name = name, Surname = surName, Mail = mail});
+            return Create(new Employee { Name = name, Surname = surName, Mail = mail });
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
                 return id;
             }
 
-            throw  new ArgumentException($"The Employee entity {id} has not been deleted.");
+            throw new ArgumentException($"The Employee entity {id} has not been deleted.");
         }
     }
 }

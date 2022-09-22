@@ -14,15 +14,15 @@ namespace Devon4Net.Application.WebAPI.Implementation.Data.Repositories
             ) : base(context)
         {
         }
-        
+
         public Task<Dish> GetDishById(long id)
         {
             Devon4NetLogger.Debug($"GetDishByID method from repository Dishservice with value : {id}");
-            
+
             return GetFirstOrDefault(t => t.Id == id);
         }
-        
-        public async Task<IList<Dish>> GetAllNested(IList<string> nestedProperties, Expression<Func<Dish, bool>> predicate = null) 
+
+        public async Task<IList<Dish>> GetAllNested(IList<string> nestedProperties, Expression<Func<Dish, bool>> predicate = null)
         {
             return await Get(nestedProperties, predicate);
         }

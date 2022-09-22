@@ -14,7 +14,7 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagemen
     /// <summary>
     /// Employee service implementation
     /// </summary>
-    public class EmployeeService: Service<EmployeeContext>, IEmployeeService
+    public class EmployeeService : Service<EmployeeContext>, IEmployeeService
     {
         private readonly IEmployeeRepository _employeeRepository;
 
@@ -115,9 +115,9 @@ namespace Devon4Net.Application.WebAPI.Implementation.Business.EmployeeManagemen
                 throw new EmployeeNotFoundException($"The employee with id {id} does not exists and is not possible to delete.");
             }
 
-            employee.Name= name;
+            employee.Name = name;
             employee.Surname = surName;
-            employee.Mail= mail;
+            employee.Mail = mail;
 
             return await _employeeRepository.Update(employee).ConfigureAwait(false);
         }
